@@ -60,6 +60,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
-Your Name - [your-email@example.com](mailto:your-email@example.com)
+Your Name - [nivedvc3@gmail.com](mailto:nivedvc3@gmail.com)
 
-Project Link: [https://github.com/your-username/portfolio](https://github.com/your-username/portfolio)
+Project Link: [https://github.com/nivedvc/my_portfolio](https://github.com/nivedvc/my_portfolio)
