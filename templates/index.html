@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="hero" class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Hi, I'm <span class="highlight">{{ data.name }}</span></h1>
+            <p class="tagline">{{ data.tagline }}</p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>{{ data.summary }}</p>
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> {{ data.contact.location }}</p>
+                <p><i class="fas fa-envelope"></i> {{ data.contact.email }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="skills">
+    <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+        <div class="skills-grid">
+            {% for category, items in data.skills.items() %}
+            <div class="skill-card">
+                <h3>{{ category }}</h3>
+                <ul>
+                    {% for skill in items %}
+                    <li>{{ skill }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="experience">
+    <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+            {% for exp in data.experience %}
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">{{ exp.period }}</div>
+                <div class="timeline-content">
+                    <h3>{{ exp.role }}</h3>
+                    <h4>{{ exp.company }}</h4>
+                    <ul>
+                        {% for highlight in exp.highlights %}
+                        <li>{{ highlight }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="container">
+        <h2 class="section-title">Recent Projects</h2>
+        <div class="projects-grid">
+            {% for project in data.projects %}
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>{{ project.title }}</h3>
+                    <p class="tech-stack">{{ project.tech }}</p>
+                    <p>{{ project.description }}</p>
+                    <a href="{{ project.link }}" class="project-link" target="_blank">View on GitHub <i
+                            class="fab fa-github"></i></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <div class="contact-wrapper">
+            <div class="contact-form-container">
+                <form action="{{ url_for('contact') }}" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-details">
+                <h3>Let's Connect</h3>
+                <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+                <div class="social-links">
+                    <a href="{{ data.contact.linkedin }}" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="{{ data.contact.github }}" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="mailto:{{ data.contact.email }}"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
