@@ -57,8 +57,16 @@ body {
 .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--accent-color);
     text-decoration: none;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.logo-tag {
+    color: var(--text-secondary);
+}
+
+.logo-name {
+    color: var(--accent-color);
 }
 
 .nav-links {
@@ -90,6 +98,18 @@ body {
     background: radial-gradient(circle at top right, var(--accent-glow), transparent);
 }
 
+.hero .container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.hero-content {
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+}
+
 .hero h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
@@ -104,6 +124,35 @@ body {
     color: var(--text-secondary);
     margin-bottom: 2rem;
     max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 3.2em;
+    /* Height for ~2 lines to prevent vertical shift */
+}
+
+#typing-text::after {
+    content: '|';
+    margin-left: 5px;
+    color: var(--accent-color);
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .hero-cta .btn {
@@ -111,8 +160,6 @@ body {
     padding: 0.8rem 2rem;
     border-radius: 8px;
     font-weight: 600;
-    display: inline-block;
-    margin-right: 1rem;
     transition: all 0.3s;
 }
 
@@ -313,7 +360,8 @@ section {
     color: var(--text-secondary);
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
     width: 100%;
     padding: 1rem;
     background: var(--card-bg);
@@ -323,7 +371,8 @@ section {
     outline: none;
 }
 
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus,
+.form-group textarea:focus {
     border-color: var(--accent-color);
 }
 
@@ -362,7 +411,7 @@ section {
     background: var(--accent-color);
     color: #000;
     margin-bottom: 1rem;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
@@ -389,7 +438,15 @@ section {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .contact-wrapper { grid-template-columns: 1fr; }
-    .nav-links { display: none; }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
 }

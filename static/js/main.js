@@ -32,3 +32,24 @@ if (burger) {
         burger.classList.toggle('toggle');
     });
 }
+
+// Typing Animation
+window.addEventListener('load', () => {
+    const typingElement = document.getElementById('typing-text');
+    if (typingElement) {
+        const text = typingElement.getAttribute('data-text');
+        let index = 0;
+        const typingSpeed = 30; // ms per character
+
+        function type() {
+            if (index < text.length) {
+                typingElement.textContent += text.charAt(index);
+                index++;
+                setTimeout(type, typingSpeed);
+            }
+        }
+
+        // Start typing after a short delay
+        setTimeout(type, 500);
+    }
+});

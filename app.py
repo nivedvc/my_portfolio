@@ -11,8 +11,8 @@ app.secret_key = os.getenv('SECRET_KEY')
 # Portfolio Data
 PORTFOLIO_DATA = {
     "name": "Nived VC",
-    "tagline": "Senior Python Developer | Web Scraping & Automation Specialist",
-    "summary": "Senior Python Developer with 3+ years of experience specializing in web scraping, large-scale data extraction, anti-bot bypassing, and automation. Proven expertise in building scalable crawlers, reverse-engineering complex websites, and optimizing data pipelines.",
+    "tagline": "Python Developer | Web Scraping & Automation Specialist",
+    "summary": "Senior Python Developer with 3 years of experience specializing in web scraping, large-scale data extraction, anti-bot bypassing, and automation. Proven expertise in building scalable crawlers, reverse-engineering complex websites, and optimizing data pipelines.",
     "contact": {
         "email": "vcnived@gmail.com",
         "phone": "+9400501368",
