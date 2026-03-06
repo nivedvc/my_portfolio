@@ -439,7 +439,26 @@ section {
 /* Responsive */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        word-wrap: break-word;
+    }
+
+    .tagline {
+        font-size: 1.1rem;
+        min-height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+        max-width: 280px;
+        margin: 0;
     }
 
     .contact-wrapper {
