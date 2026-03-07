@@ -27,7 +27,7 @@ PORTFOLIO_DATA = {
     "skills": {
         "Languages & Libraries": ["Python", "Pandas", "Playwright", "Requests", "curl_cffi", "lxml", "Flask"],
         "Web Scraping & Automation": ["Web Scraping", "Anti-Bot Bypassing", "CAPTCHA Handling", "Reverse Engineering", "XPath", "Regex"],
-        "Tools & Platforms": ["Git", "GitLab CI/CD", "Jira", "PyCharm", "Sentry", "Graylog"],
+        "Tools & Platforms": ["Git", "GitLab CI/CD", "Jira", "PyCharm", "Sentry", "Graylog", "AWS EC2", "Nginx", "Gunicorn"],
         "Data & Storage": ["SQL", "CSV", "JSON", "XLSX", "ETL Pipelines", "Elasticsearch", "Redis"]
     },
     "experience": [
@@ -71,6 +71,12 @@ PORTFOLIO_DATA = {
             "tech": "Flask | Python | SQLite",
             "description": "Built a Flask web application that aggregates job listings based on keywords. Implemented scraping with proxy handling and anti-bot bypass.",
             "link": "https://github.com/nivedvc/job_search_project"
+        },
+        {
+            "title": "AI Portfolio Website",
+            "tech": "Flask | Gemini AI | AWS | GitHub Actions",
+            "description": "A professional portfolio featuring an AI chatbot assistant. Deployed on AWS EC2 with Nginx/Gunicorn and automated CI/CD via GitHub Actions.",
+            "link": "https://github.com/nivedvc/my_portfolio"
         }
     ],
     "education": [
@@ -130,6 +136,8 @@ Areas of Work:
 
 Projects:
 Nived has worked on projects involving:
+- AI Portfolio Website: A personal portfolio with a Gemini-powered AI assistant, deployed on AWS with CI/CD.
+- Job Search Web App: A Flask app aggregating job listings using web scraping with antibot bypass.
 - Automated data extraction systems
 - Scraping websites protected with antibot mechanisms
 - Automation workflows and bots
